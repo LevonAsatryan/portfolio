@@ -1,0 +1,68 @@
+body {
+	font-family: 'Noto Sans', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: normal;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+	font-size: 16px;
+	transition:
+		background-color 0.5s,
+		color 0.5s;
+
+	background-color: var(--background);
+	color: var(--font);
+
+	--content-max-width: 1280px;
+	--header-height: 100px;
+	--body-padding: 10%;
+
+	--background: rgba(26, 26, 26, 1);
+	--font: rgba(255, 255, 255, 0.81);
+	--accent: rgb(225, 100, 91);
+	--header-background: rgba(92, 92, 92, 1);
+	--header-height: 80px;
+}
+
+p {
+	font-size: 1.2rem;
+	line-height: 1.5;
+	margin-top: 15px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	margin-top: 30px;
+}
+
+h2 {
+	font-size: 2rem;
+	margin-top: 30px;
+}
+
+h3 {
+	font-size: 1.5rem;
+	margin-top: 30px;
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+a {
+	color: var(--font);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+a:hover {
+	animation: zoom 0.5s forwards;
+}
+
+.max-width-limitor {
+	max-width: var(--content-max-width);
+}
