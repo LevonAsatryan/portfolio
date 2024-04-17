@@ -62,7 +62,7 @@
 		<p>
 			As a matter of fact, this very website was my experiment with SvelteKit. I wanted to
 			familiarize myself with the library, and decided to treat myself to a personal website. You
-			can find the source code of this project <a href="https://github.com">
+			can find the source code of this project <a href="https://github.com/LevonAsatryan/portfolio">
 				On my
 				<div class="github-icon">
 					<img src={githubIcon} alt="Github icon" />
