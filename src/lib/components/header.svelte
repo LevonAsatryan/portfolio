@@ -1,6 +1,6 @@
 <script>
 	import Lights from './lights.svelte';
-	import { scrollToElement } from '../lib/utils';
+	import { scrollToElement } from '$lib/utils';
 	/**
 	 * @param {string} elementName
 	 */

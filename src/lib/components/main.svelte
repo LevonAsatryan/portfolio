@@ -1,10 +1,11 @@
 <script>
 	import { scrollToElement } from '$lib/utils';
 	import Project from './project.svelte';
-	import { projects } from '$lib/constants';
+	import { projects, achievements } from '$lib/constants';
 
 	import githubIcon from '$lib/assets/github-mark-white.png';
-	import '../styles.css';
+
+	import '../../styles.css';
 </script>
 
 <main class="main max-width-limitor">
@@ -26,31 +27,9 @@
 			<b>Among my professional achievemnts:</b>
 		</p>
 		<ul class="achievements">
-			<li>Successfully shipped a project with embedded systems using C++ and LabView.</li>
-			<li>Created games for Microsoft.</li>
-			<li>
-				Worked in teams of all sizes, varying from 1-2 developers, to scrum teams of 6-12 people in
-				big enterprises
-			</li>
-			<li>
-				Contributed to variety of fields including: Medical, FinTech, GameDev, Law & Education.
-			</li>
-			<li>
-				I'm comfortable with working in Startups, Outsource companies, big and small teams as well
-				as solo
-			</li>
-			<li>
-				Throughout my experience I contributed to the CI/CD experience of the teams. As well as came
-				up with ideas on how to improve them
-			</li>
-			<li>
-				Successfully integrated testing environment and guidelines for a team of front-end engineers
-				to improve the quality of the product.
-			</li>
-			<li>
-				Lead a team of 13 developers at Sololearn. My responsibilities included: mentoring, code
-				reviews, designing new projects and improving the existing ones.
-			</li>
+			{#each achievements as achievement}
+				<li>{achievement}</li>
+			{/each}
 		</ul>
 
 		<p>
