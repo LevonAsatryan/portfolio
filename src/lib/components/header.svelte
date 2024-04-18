@@ -1,7 +1,7 @@
 <script>
 	import Lights from './lights.svelte';
 	import { scrollToElement } from '$lib/utils';
-	import logo from '$lib/assets/logo.png';
+	import logo from '$lib/assets/logo.jpg';
 </script>
 
 <header class="header">
@@ -13,7 +13,7 @@
 				data-link="home"
 				on:click={() => scrollToElement('home')}
 			>
-				<span><img src={logo} alt="logo" class="logo" /></span>
+				<img src={logo} alt="logo" class="logo" />
 			</a>
 		</nav>
 		<Lights />
@@ -21,16 +21,12 @@
 </header>
 
 <style>
-	.header-nav {
-		display: flex;
-		gap: 50px;
-	}
-
 	.header {
 		position: fixed;
 
-		padding: 20px var(--body-padding);
+		padding: 0 var(--body-padding);
 		width: calc(100% - 2 * var(--body-padding));
+		height: 60px;
 		background-color: var(--header-background);
 		color: var(--font);
 		left: 0;
@@ -40,12 +36,17 @@
 		z-index: 1;
 	}
 
+	.header-nav {
+		margin-top: 4px;
+	}
+
 	.header .content {
-		display: grid;
-		grid-template-columns: 3fr 1fr;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	.header .logo {
-		width: 180px;
+		width: 50px;
 	}
 </style>
