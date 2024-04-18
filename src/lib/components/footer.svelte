@@ -1,5 +1,5 @@
 <script>
-	import '../../styles.css';
+	import '$lib/assets/styles/styles.css';
 </script>
 
 <footer data-name="footer" class="contacts">
@@ -12,7 +12,7 @@
 			📞 <a href="tel:+352691381541">+352-691-381-541</a>
 		</p>
 		<p>
-			📱 <a href="https://www.linkedin.com/in/asatryan-levon/">Linkedin</a>
+			📱 <a href="https://www.linkedin.com/in/asatryan-levon/" target="_blank">Linkedin</a>
 		</p>
 	</div>
 </footer>

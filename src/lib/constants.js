@@ -1,3 +1,7 @@
+import jsLogo from './assets/javascript.svg';
+import tsLogo from './assets/typescript.svg';
+import godotLogo from './assets/godot.svg';
+
 export const projects = [
 	{
 		name: 'Double Coconut',
@@ -129,8 +133,7 @@ export const projects = [
 	}
 ];
 
-export const achievements = [
-	`Successfully shipped a project with embedded systems using C++ and LabView.`,
+export const ACHIEVEMENTS_DATA = [
 	`Created multiple games for Microsoft.`,
 	`Worked in teams of all sizes, varying from 1-2 developers, to scrum teams of 6-12 people in
 				big enterprises`,
@@ -143,4 +146,48 @@ export const achievements = [
 	to improve the quality of the product.`,
 	`Lead a team of 13 developers at Sololearn. My responsibilities included: mentoring, code
 	reviews, designing new projects and improving the existing ones.`
+];
+
+/**
+ * @typedef CardInfo
+ * @property {Object} icon
+ * @property {string} title
+ * @property {string} description
+ * @property {string} techStackTitle
+ * @property {Array.<string>} techStack
+ * @property {string} toolsTitle
+ * @property {Array.<string>} tools
+ */
+
+/**
+ * @type {Array.<CardInfo>}
+ */
+export const HIGHLIGHT_CARDS_DATA = [
+	{
+		icon: jsLogo,
+		title: `Front-End Development`,
+		description: `I like seeing how things look after I'm done coding them. I enjoy designing complex front-end systems.`,
+		techStackTitle: 'Languages I use:',
+		techStack: ['JavaScript', 'TypeScript'],
+		toolsTitle: 'Technologies I use frequently:',
+		tools: ['Angular', 'React', 'Svelte', 'Webpack', 'Vite']
+	},
+	{
+		icon: tsLogo,
+		title: `Back-End Development`,
+		description: `I also like working without a UI. I enjoy the complexity of back-end systems and the challenges they bring`,
+		techStackTitle: 'Languages I code in:',
+		techStack: ['JavaScript', 'TypeScript', 'Go'],
+		toolsTitle: 'Technologies I use frequently:',
+		tools: ['NodeJS', 'Express', 'MongoDB', 'PostgreSQL', 'Docker', 'NestJS']
+	},
+	{
+		icon: godotLogo,
+		title: `Game Development`,
+		description: `My personal favorite. The problems I face in game dev are always unique and interesting.`,
+		techStackTitle: 'Languages I code in:',
+		techStack: ['JavaScript', 'TypeScript', 'GDScript'],
+		toolsTitle: 'Technologies I use frequently:',
+		tools: ['GodotEngine', 'Threejs', 'PhaserJS', 'PixiJS']
+	}
 ];

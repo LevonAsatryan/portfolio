@@ -1,10 +1,7 @@
 <script>
 	import Lights from './lights.svelte';
 	import { scrollToElement } from '$lib/utils';
-	/**
-	 * @param {string} elementName
-	 */
-	const headerHeight = 80;
+	import logo from '$lib/assets/logo.png';
 </script>
 
 <header class="header">
@@ -16,17 +13,7 @@
 				data-link="home"
 				on:click={() => scrollToElement('home')}
 			>
-				<span>Home</span>
-			</a>
-
-			<a data-link="about" on:click={() => scrollToElement('about')} href="#about">
-				<span>About me</span>
-			</a>
-			<a data-link="projects" on:click={() => scrollToElement('projects')} href="#projects">
-				<span>Projects</span>
-			</a>
-			<a data-link="contacts" on:click={() => scrollToElement('footer')} href="#contacts">
-				<span>Contacts</span>
+				<span><img src={logo} alt="logo" class="logo" /></span>
 			</a>
 		</nav>
 		<Lights />
@@ -56,5 +43,9 @@
 	.header .content {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
+	}
+
+	.header .logo {
+		width: 180px;
 	}
 </style>

@@ -21,10 +21,11 @@ body {
 	--accent: rgb(225, 100, 91);
 	--header-background: rgba(92, 92, 92, 1);
 	--header-height: 80px;
+	--code-color: rgba(36, 76, 255, 1);
+	--architect-color: rgba(209, 156, 44, 1);
 }
 
 p {
-	font-size: 1.2rem;
 	line-height: 1.5;
 	margin-top: 15px;
 }
