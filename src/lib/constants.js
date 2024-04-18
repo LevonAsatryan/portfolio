@@ -1,6 +1,9 @@
 import jsLogo from './assets/javascript.svg';
-import tsLogo from './assets/typescript.svg';
+import goLogo from './assets/go.svg';
 import godotLogo from './assets/godot.svg';
+import muwg from './assets/muwg.jpeg';
+import sololearn from './assets/sololearn.jpeg';
+import aiva from './assets/aiva.jpeg';
 
 export const projects = [
 	{
@@ -173,7 +176,7 @@ export const HIGHLIGHT_CARDS_DATA = [
 		tools: ['Angular', 'React', 'Svelte', 'Webpack', 'Vite']
 	},
 	{
-		icon: tsLogo,
+		icon: goLogo,
 		title: `Back-End Development`,
 		description: `I also like working without a UI. I enjoy the complexity of back-end systems and the challenges they bring`,
 		techStackTitle: 'Languages I code in:',
@@ -189,5 +192,37 @@ export const HIGHLIGHT_CARDS_DATA = [
 		techStack: ['JavaScript', 'TypeScript', 'GDScript'],
 		toolsTitle: 'Technologies I use frequently:',
 		tools: ['GodotEngine', 'Threejs', 'PhaserJS', 'PixiJS']
+	}
+];
+
+/**
+ * @typedef ProjectCardInfo
+ * @property {string} title
+ * @property {string} description
+ * @property {string} url
+ * @property {string} image
+ */
+
+/**
+ * @type {Array.<ProjectCardInfo>}
+ */
+export const PROJECTS_CARD_INFO = [
+	{
+		title: 'Microsoft UWG',
+		description: `Microsoft Ultimate Word Games. A platform for multiple fun word games.`,
+		url: 'https://zone.msn.com/gameplayer/gameplayerHTML.aspx?game=msultimateword',
+		image: muwg
+	},
+	{
+		title: 'Sololearn',
+		description: `Sololearn is a learning platform, created to help people learn to code. I lead a team of 13 developers on this project.`,
+		url: 'https://www.sololearn.com',
+		image: sololearn
+	},
+	{
+		title: 'Aiva',
+		description: `AIVA is a generative AI, that helps composers to create music. We created an Electron based live notes editor for it.`,
+		url: 'https://www.aiva.ai',
+		image: aiva
 	}
 ];

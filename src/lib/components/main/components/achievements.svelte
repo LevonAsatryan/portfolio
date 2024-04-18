@@ -4,7 +4,7 @@
 	import githubIcon from '$lib/assets/github-mark-white.png';
 </script>
 
-<section>
+<section class="achievements">
 	<p>
 		<b>Among my professional achievemnts:</b>
 	</p>
@@ -44,6 +44,9 @@
 </section>
 
 <style>
+	.achievements {
+		margin-top: 80px;
+	}
 	.github-icon {
 		height: 20px;
 		width: 20px;

@@ -4,8 +4,7 @@
 	import About from '$lib/components/main/components/about.svelte';
 	import Highlights from '$lib/components/main/components/highlights.svelte';
 	import Achievements from '$lib/components/main/components/achievements.svelte';
-
-	import { projects } from '$lib/constants';
+	import Projects from '$lib/components/main/components/projects.svelte';
 
 	import '$lib/assets/styles/styles.css';
 </script>
@@ -14,14 +13,8 @@
 	<Intro />
 	<About />
 	<Highlights />
+	<Projects />
 	<Achievements />
-
-	<section data-name="projects">
-		<h1>Projects</h1>
-		{#each projects as project}
-			<Project projectInfo={project} />
-		{/each}
-	</section>
 </main>
 
 <style>

@@ -2,13 +2,15 @@
 	import Lights from './lights.svelte';
 	import { scrollToElement } from '$lib/utils';
 	import logo from '$lib/assets/logo.jpg';
+
+	import '$lib/assets/styles/styles.css';
 </script>
 
 <header class="header">
 	<div class="content max-width-limitor">
 		<nav class="header-nav">
 			<a
-				class="header-link header-link-home"
+				class="header-link header-link-home scale-on-hover"
 				href="#home"
 				data-link="home"
 				on:click={() => scrollToElement('home')}
