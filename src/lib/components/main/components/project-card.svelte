@@ -16,8 +16,8 @@
 
 <style>
 	.width-height {
-		width: 340px;
-		height: 400px;
+		width: 344px;
+		height: 336px;
 	}
 
 	.card {
@@ -26,8 +26,9 @@
 		justify-content: center;
 		align-items: center;
 		text-align: center;
-		transition: none !important;
+		animation: none;
 		border-radius: 20px;
+		padding: 0 10px;
 	}
 
 	.card:hover .positioned {
@@ -45,10 +46,12 @@
 		transition: all 0.45s ease-in-out;
 		background-color: #141c3a;
 		border-radius: 20px;
+		padding: 0 10px;
 	}
 
 	.img {
 		object-fit: cover;
 		border-radius: 20px;
+		width: 364px;
 	}
 </style>
