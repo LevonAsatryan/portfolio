@@ -2,6 +2,15 @@
 	import { scrollToElement } from '$lib/utils';
 	import { ACHIEVEMENTS_DATA } from '$lib/constants';
 	import githubIcon from '$lib/assets/github-mark-white.png';
+	import githubIconBlack from '$lib/assets/github-mark.png';
+
+	import { theme } from '$lib/store/store';
+	/**
+	 * @type string
+	 */
+	let themeValue;
+
+	theme.subscribe((v) => (themeValue = v));
 </script>
 
 <section class="achievements">
@@ -26,7 +35,7 @@
 		source code of this project <a href="https://github.com/LevonAsatryan/portfolio">
 			On my
 			<div class="github-icon">
-				<img src={githubIcon} alt="Github icon" />
+				<img src={themeValue === 'dark' ? githubIcon : githubIconBlack} alt="Github icon" />
 			</div>
 			account:
 		</a>

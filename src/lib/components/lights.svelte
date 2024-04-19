@@ -1,5 +1,10 @@
 <script>
-	let theme = 'dark';
+	import { theme } from '$lib/store/store';
+	import { browser } from '$app/environment';
+	/**
+	 * @type string
+	 */
+	let themeValue;
 
 	const configs = new Map();
 	configs.set('dark', {
@@ -16,17 +21,6 @@
 		'header-background': 'rgba(227, 227, 227, 1)'
 	});
 
-	const toggleLights = () => {
-		theme = theme === 'dark' ? 'light' : 'dark';
-		const root = document.querySelector('body');
-		if (!root) {
-			throw new Error('Wait what? HTML Body not found?');
-		}
-		const colors = configs.get(theme);
-		for (const key in colors) {
-			setCssProperty(root, `--${key}`, colors[key]);
-		}
-	};
 	/**
 	 *
 	 * @param {HTMLElement} element
@@ -36,10 +30,36 @@
 	const setCssProperty = (element, property, value) => {
 		element.style.setProperty(property, value);
 	};
+
+	const setTheme = () => {
+		if (!browser) {
+			return;
+		}
+		const root = document.querySelector('body');
+		if (!root) {
+			throw new Error('Wait what? HTML Body not found?');
+		}
+		const colors = configs.get(themeValue);
+		console.info({ colors, theme });
+		for (const key in colors) {
+			setCssProperty(root, `--${key}`, colors[key]);
+		}
+	};
+
+	theme.subscribe((t) => {
+		themeValue = t;
+		setTheme();
+	});
+
+	const toggleLights = () => {
+		theme.update((v) => {
+			return v === 'dark' ? 'light' : 'dark';
+		});
+	};
 </script>
 
 <div class="theme-select">
-	{#if theme === 'dark'}
+	{#if themeValue === 'dark'}
 		<button on:click={toggleLights}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +86,7 @@
 			Lights On</button
 		>
 	{/if}
-	{#if theme === 'light'}
+	{#if themeValue === 'light'}
 		<button on:click={toggleLights}
 			><svg
 				xmlns="http://www.w3.org/2000/svg"
