@@ -16,3 +16,9 @@ This was part of my learning process of Svelte. I was having fun creating a port
 # Contact
 
 Feel free to drop an email if you have any questions or suggestions at levonasatryan28@gmail.com
+
+# Screenshots
+
+![Alt text](screenshots/1.png?raw=true 'First section')
+![Alt text](screenshots/2.png?raw=true 'Second section')
+![Alt text](screenshots/3.png?raw=true 'Third section')
