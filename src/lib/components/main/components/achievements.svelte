@@ -44,12 +44,6 @@
 		Also checkout my <a href="https://medium.com/@levonasatryan28">Medium</a> profile, where I'm logging
 		the development of my game :)
 	</p>
-
-	<p>
-		You can check out some of
-		<a href="#projects" on:click={() => scrollToElement('projects')}>my work</a>
-		bellow.
-	</p>
 </section>
 
 <style>
