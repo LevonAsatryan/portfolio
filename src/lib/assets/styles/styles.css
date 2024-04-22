@@ -25,6 +25,13 @@ body {
 	--architect-color: rgba(209, 156, 44, 1);
 }
 
+.main-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
 p {
 	line-height: 1.5;
 	margin-top: 15px;
